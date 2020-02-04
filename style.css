@@ -13,8 +13,8 @@ h1
 .allUsers
 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-left: 4rem;
 }
 .userBox
 {
@@ -71,7 +71,11 @@ h3
 }
 .selected
 {
-    
+    background-color: seashell;
+}
+a
+{
+    color: #008B8B;
 }
 
 

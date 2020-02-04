@@ -14,24 +14,27 @@ p.then(data =>
     const html = data.map( user => 
     {
       count++;
+      user.dataID = count;
       return `
       <div>
         <div>
-          <h3>${count}</h3>
+          <h3><a href>${count}<a></h3>
         </div>
-          <div class = 'userBox'>
-            <br>
-              <p class = 'userName'>
-                ${ user.fullName }  
-              </p>
-            <br>
-              <p class = 'userEmail'>
-                ${ user.email }  
-              </p>
-            <br>
-              <p class = 'userPic' style = 'background-image: url(${user.avatar})'
-              </p>
-          </div>
+          <a href>
+            <div class = 'userBox'>
+              <br>
+                <p class = 'userName'>
+                  ${ user.fullName }  
+                </p>
+              <br>
+                <p class = 'userEmail'>
+                  ${ user.email }  
+                </p>
+              <br>
+                <p class = 'userPic' style = 'background-image: url(${user.avatar})'
+                </p>
+            </div>
+          <a>
       </div>
       `;
     }).join('');
@@ -40,16 +43,11 @@ p.then(data =>
 
 window.addEventListener('hashchange', () =>
 {
-    loadData();
+    singleUser();
 })
 
-const loadData = () =>
+const singleUser = () =>
 {
     const page = window.location.hash.slice(1);
-    fetch(`https://acme-users-api-rev.herokuapp.com/api/users/random}`)
-    .then( response => response.json())
-    .then( results => 
-    {
 
-    });
 }
