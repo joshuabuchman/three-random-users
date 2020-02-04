@@ -14,27 +14,24 @@ p.then(data =>
     const html = data.map( user => 
     {
       count++;
-      user.dataID = count;
       return `
       <div>
-        <div>
-          <h3><a href>${count}<a></h3>
-        </div>
-          <a href>
-            <div class = 'userBox'>
-              <br>
-                <p class = 'userName'>
-                  ${ user.fullName }  
-                </p>
-              <br>
-                <p class = 'userEmail'>
-                  ${ user.email }  
-                </p>
-              <br>
-                <p class = 'userPic' style = 'background-image: url(${user.avatar})'
-                </p>
-            </div>
-          <a>
+          <h3><a href = '#${count}'>${count}<a></h3>
+        <a href = #${count}>
+          <div class = 'userBox' data-id = '${count}'>
+            <br>
+              <p class = 'userName'>
+                ${ user.fullName }  
+              </p>
+            <br>
+              <p class = 'userEmail'>
+                ${ user.email }  
+              </p>
+            <br>
+              <p class = 'userPic' style = 'background-image: url(${user.avatar})'
+              </p>
+          </div>
+        <a>   
       </div>
       `;
     }).join('');
@@ -43,11 +40,23 @@ p.then(data =>
 
 window.addEventListener('hashchange', () =>
 {
-    singleUser();
-})
 
-const singleUser = () =>
-{
-    const page = window.location.hash.slice(1);
-
-}
+    const idStr = window.location.hash.slice(1);
+    const allUsers = [...document.querySelectorAll('.userBox')];
+    allUsers.forEach( elem =>
+    {
+        console.log(elem.getAttribute('data-id'),idStr)
+        if(elem.getAttribute('data-id')===idStr)
+        {
+            
+            elem.classList.add('selected')
+            elem.classList.remove('hidden')
+        }
+        else
+        {
+            elem.classList.add('hidden')
+            elem.classList.remove('selected')
+        }
+    })
+    
+});

@@ -2,7 +2,7 @@ body
 {
     background-color: seashell;
 }
-h1
+.title
 {
     font-family: sans-serif;
     text-align: center;
@@ -14,7 +14,7 @@ h1
 {
     display: flex;
     justify-content: space-evenly;
-    padding-left: 4rem;
+    text-align: center;
 }
 .userBox
 {
@@ -28,9 +28,6 @@ h1
     width: 15rem;
     margin: 0rem;
     padding-left: 0%;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
 }
 h3
 {
@@ -69,13 +66,12 @@ h3
     margin-left: 5rem;
     margin-top: 0rem;
 }
-.selected
+.hidden
 {
-    background-color: seashell;
+    display: none;
 }
 a
 {
     color: #008B8B;
 }
-
 
