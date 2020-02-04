@@ -1,0 +1,77 @@
+body
+{
+    background-color: seashell;
+}
+h1
+{
+    font-family: sans-serif;
+    text-align: center;
+    color: #008B8B;
+    text-decoration: underline;
+    padding-top: 1rem;
+}
+.allUsers
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.userBox
+{
+    font-family: sans-serif;
+    border-radius: 1rem;
+    background-color: #008B8B;
+    border: solid 1px black;
+    color: white;
+    font-size: small;
+    height: 14rem;
+    width: 15rem;
+    margin: 0rem;
+    padding-left: 0%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+h3
+{
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #008B8B;
+    text-decoration: underline;
+    text-align: center;
+    align-content: center;
+}
+.userName
+{
+    font-family: sans-serif;
+    color: white;
+    padding: 0%;
+}
+.userEmail
+{
+    font-family: sans-serif;
+    color: white;
+    padding: 0%;
+}
+.userPic
+{
+    font-family: sans-serif;
+    color: white;
+    padding: 0%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    width: 5rem;
+    height: 5rem;
+    align-content: center;
+    margin-left: 5rem;
+    margin-top: 0rem;
+}
+.selected
+{
+    
+}
+
+
